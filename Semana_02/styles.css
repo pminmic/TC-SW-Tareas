@@ -1,0 +1,84 @@
+/* Fondo y fuente de las letras */
+body {
+    background-color: #F5F5F5;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Títulos bonitos */
+h1 {
+    text-align: center;
+    font-size: 32px;
+    color: #232383;
+    margin: 35px;
+}
+
+h2 {
+    color: #232383;
+    margin-top: 20px;
+}
+
+/* Simulamos las tarjetas de las diferentes secciones */
+div {
+    background-color: white;
+    border-radius: 6px;
+    padding: 15px;
+    margin: 15px;
+}
+
+/* Hacemos la imagen lo grande que nos interesa */
+img {
+    width: 400px;
+    border-radius: 5px;
+}
+
+/* Bordes bonitos para la tabla */
+table {
+    border: 1px solid lightgray;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th {
+    border: 1px solid #fff;
+    color: white;
+    background-color: #232383;
+    padding: 9px;
+    text-align: left;
+}
+
+td {
+    border: 1px solid lightgray;
+    padding: 9px;
+}
+
+/* Longitud y anchura específicos para el bloque de texto */
+input[type="text"] {
+    margin: 8px 0px;
+    border: 1px solid lightgrey;
+    border-radius: 5px;
+    height: 30px;
+    width: 250px;
+}
+
+/* Separación de los botones */
+input[type="radio"] {
+    margin: 4px;
+}
+
+/* Decoración del botó submit */
+input[type="submit"] {
+    background-color: #232383;
+    color: white;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 16px;
+    border-color: #232383;
+    text-align: center;
+}
+
+/* Arreglamos los enlaces para que no se vean mal una vez visitados */
+a, a:visited {
+    color:#232383;
+    text-decoration: none;
+    outline: none;
+}
