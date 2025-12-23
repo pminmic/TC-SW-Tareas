@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>Romancero gitano</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+        #centrar {
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        h1, pre, p{
+            text-align: center;
+        }
+
+        p {
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-size: 14px;
+            margin-top: 30px;
+        }
+
+        #poema {
+            font-family:'Courier New', Courier, monospace;
+            font-size: 20px;
+        }
+
+        #botones {
+            text-align: center;
+        }
+
+        #boton {
+            margin: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 8px;
+            border: none;    
+            cursor: pointer;
+        }
+
+        .default {
+            background-color: #000000;
+            color: #fff;
+            transition: 
+                background-color 0.6s, 
+                color 0.6s;
+        }
+
+        .luna {
+            background-color: #000000;
+            color: white;
+            transition: 
+                background-color 0.6s, 
+                color 0.6s;
+        }
+
+        .guardia-civil {
+            background-color: #5D6532;
+            color: white;
+            transition: 
+                background-color 0.6s, 
+                color 0.6s;
+        }
+
+        .sangre {
+            background-color: #8A0303;
+            color: white;
+            transition: 
+                background-color 0.6s, 
+                color 0.6s;
+        }
+
+        .caballo {
+            background-color: #846230;
+            color: white;
+            transition: 
+                background-color 0.6s, 
+                color 0.6s;
+        }
+
+        .navaja {
+            background-color: #C0C0C0;
+            color: black;
+            transition: 
+                background-color 0.6s,
+                color 0.6s;
+        }
+
+        .aurora {
+          background: linear-gradient(120deg,
+            #ff005d,
+            #ff9f1c,
+            #ffee32,
+            #3cff00,
+            #00e5ff,
+            #7a00ff,
+            #ff00c8
+          );
+          background-size: 600% 600%;
+          animation: aurora 10s linear infinite;
+          color: black;
+        }
+
+        @keyframes aurora {
+          0%   { background-position: 0% 50%; }
+          50%  { background-position: 100% 50%; }
+          100% { background-position: 0% 50%; }
+        }
+
+    </style>
+</head>
+
+<body id="body">
+    <header>
+        <p>Versos: <span id="versos"></span> · Estrofas: <span id="estrofas"></span></p>
+    </header>
+    <main>
+        <div id="centrar">
+            <h1 id="titulo"></h1>
+            <pre id="poema"></pre>
+            <div id="botones">
+                <button id="boton">Cambiar poema</button>
+            </div>
+        </div>
+    </main>
+
+    <script src="./poemas.js"></script>
+    <script>
+        // Luna es la palabra que más veces aparece, entonces será la última que comporbaremos
+        const palabraClase = (text) => {
+            const texto = text.toLowerCase();
+            if (texto.includes('aurora')) return 'aurora';
+            else if (texto.includes('guardia civil')) return 'guardia-civil';
+            else if (texto.includes('cuchillo') || texto.includes('navaja')) return 'navaja';           
+            else if (texto.includes('caballo')) return 'caballo';
+            else if (texto.includes('sangre')) return 'sangre';
+            else return 'default';
+        };
+
+        // Generamos un número aleatorio de 3 bytes (RGB)
+        const randomColor = () => {
+            return Math.floor(Math.random() * 16777215);
+        };
+
+        // Funciones para saber el número de versos y estrofas, tenemos en cuenta los títulos (que no cuentan)
+        const numVersos = (texto) => {
+            return texto.split('\n').filter(linea => linea.trim() !== '').filter(linea => !linea.startsWith("I")).length;
+        };
+
+        const numEstrofas = (texto) => {
+            return texto.split(/\n\s*\n/).filter(bloque => bloque.trim() !== '').filter(linea => !linea.startsWith("I")).length;
+        };
+
+        // Inicializamos la página con un poema aleatorio y sus estilos.
+        const numPoemas = romanceroGitano.length;
+        let contador = Math.floor(Math.random() * numPoemas);
+
+        const body = document.getElementById("body");
+
+        const titulo = document.getElementById("titulo");
+        titulo.textContent = romanceroGitano[contador].titulo;
+
+        const poema = document.getElementById("poema");
+        poema.textContent = romanceroGitano[contador].poema;
+
+        if (palabraClase(poema.textContent) !== "default") {
+            body.classList.add(palabraClase(poema.textContent));
+        }
+        else {
+            body.classList.add("default");
+            const num = randomColor();
+            body.style.backgroundColor = "#" + num.toString(16);
+            body.style.color = "#" + (-num).toString(16);
+        }
+        
+
+        const versos = document.getElementById("versos");
+        const estrofas = document.getElementById("estrofas");
+
+        versos.textContent = numVersos(romanceroGitano[contador].poema);
+        estrofas.textContent = numEstrofas(romanceroGitano[contador].poema);
+
+        // FUNCIONES PARA EL EventListener
+        const actualizarTitulo = (contador) => {
+            titulo.textContent = romanceroGitano[contador].titulo;
+        };
+
+        const actualizarTexto = (contador) => {
+            poema.textContent = romanceroGitano[contador].poema;
+        };
+
+        const actualizarVerEstr = (contador) => {
+            versos.textContent = numVersos(romanceroGitano[contador].poema);
+            estrofas.textContent = numEstrofas(romanceroGitano[contador].poema);
+        };
+
+        const actualizarFondo = () => {
+            const claseActual = palabraClase(poema.textContent);
+
+            // Quitamos la clase aplicada anteriormente
+            const clasesPosibles = ['default','luna','guardia-civil','sangre','caballo','navaja','aurora'];
+            clasesPosibles.forEach(c => body.classList.remove(c));
+
+            // Limpieza estilos inline previos para que las clases CSS tomen efecto
+            body.style.backgroundColor = '';
+            body.style.color = '';
+
+            // Añadimos la clase actual y, si es default, aplicar colores aleatorios
+            body.classList.add(claseActual);
+            if (claseActual === "default") {
+                const num = randomColor();
+                body.style.backgroundColor = "#" + num.toString(16);
+                body.style.color = "#" + (-num).toString(16);
+            }
+        };
+
+        // Interacción y cambio de valores
+        const button = document.getElementById("boton");
+        button.addEventListener("click", () => {
+            contador = (contador + 1) % numPoemas;
+            actualizarTitulo(contador);
+            actualizarTexto(contador);
+            actualizarVerEstr(contador);
+            actualizarFondo();
+        });
+
+    </script>
+</body>
+
+</html>
