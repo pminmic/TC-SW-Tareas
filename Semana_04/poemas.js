@@ -2,7 +2,7 @@
 // 18 poemas, estructura titulo / poema
 // Saltos: versos con \n, estrofas con \n\n
 
-const romanceroGitano = [
+export const romanceroGitano = [
   {
     titulo: "Romance de la luna, luna",
     poema: `La luna vino a la fragua

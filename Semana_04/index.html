@@ -125,8 +125,11 @@
         </div>
     </main>
 
-    <script src="./poemas.js"></script>
-    <script>
+    <script type="module">
+        
+        // Para poder acceder a los poemas sin crear una variable global
+        import { romanceroGitano } from "./poemas.js"
+
         // Luna es la palabra que más veces aparece, entonces será la última que comporbaremos
         const palabraClase = (text) => {
             const texto = text.toLowerCase();
