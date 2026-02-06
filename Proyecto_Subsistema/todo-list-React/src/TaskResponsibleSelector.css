@@ -1,0 +1,16 @@
+.task-resposible-select {
+    padding: 15px;
+}
+
+.responsible-text {
+    font-size: 20px;
+}
+
+.select {
+    font-size: 14px;
+    padding: 5px;
+    border-radius: 10px;
+    border: solid #777 1px;
+    background-color: lightgrey;
+    font-family: "Quantico", sans-serif;
+}

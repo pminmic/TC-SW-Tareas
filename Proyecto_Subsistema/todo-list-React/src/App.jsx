@@ -4,10 +4,10 @@ import TaskDescriptor from './TaskDescriptor'
 function App() {
 
   return (
-    <>
-      <h1>Lista de tareas</h1>
+    <div className='app'>
+      <h1 className='title'>Lista de tareas</h1>
       <TaskDescriptor />
-    </>
+    </div>
   )
 }
 

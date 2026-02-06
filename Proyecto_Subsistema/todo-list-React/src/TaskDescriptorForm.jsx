@@ -1,6 +1,7 @@
 import { useState } from "react";
 import TaskResponsibleSelector from "./TaskResposibleSelector";
 import TaskTextDescriptor from "./TaskTextDescriptor";
+import "./TaskDescriptorForm.css";
 
 const TaskDescriptorForm = ({ onSubmit }) => {
 
@@ -17,10 +18,10 @@ const TaskDescriptorForm = ({ onSubmit }) => {
     };
 
     return(
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} className="form">
             <TaskTextDescriptor value={text} onChange={setText} />
             <TaskResponsibleSelector value={responsible} onChange={handleResponsibleChange} />
-            <button type="submit">Añadir</button>
+            <button type="submit" className="submit">Añadir</button>
         </form>
     );
 };

@@ -1,0 +1,25 @@
+.item-list{
+    cursor: pointer;
+    padding: 5px;
+    font-size: 20px;
+}
+
+.item-list:hover {
+    
+    color: white;
+    border-radius: 12px;
+    animation: hover-animation 2s infinite ease-in-out;
+}
+
+@keyframes hover-animation {
+    0% {
+        color:white;
+    }
+    50% {
+        color: red;
+        font-style:oblique;
+    }
+    100% {
+        color: white;
+    }
+}

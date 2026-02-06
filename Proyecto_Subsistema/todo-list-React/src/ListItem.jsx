@@ -1,6 +1,8 @@
+import "./ListItem.css"
+
 const ListItem = ({ item, onClick }) => {
     return(
-        <li onClick={onClick}>{`${item.text} (${item.responsible})`}</li>
+        <li className="item-list" onClick={onClick}>{`${item.text} (${item.responsible})`}</li>
     );
 };
 

@@ -1,4 +1,5 @@
 import ListItem from "./ListItem";
+import "./TaskList.css"
 
 const TaskList = ({ items, updateList }) => {
 
@@ -7,9 +8,9 @@ const TaskList = ({ items, updateList }) => {
     };
 
     return(
-        <div>
-            <h2>Tareas pendientes</h2>
-            <ul>
+        <div className="task-list">
+            <h2 className="sec-title">Tareas pendientes</h2>
+            <ul className="list">
                 {items.map((item, i) => (
                     <ListItem key={i} onClick={() => handleClick(item)} item={item} />
                 ))}

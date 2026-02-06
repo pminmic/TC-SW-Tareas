@@ -1,6 +1,7 @@
 import { useState } from "react";
 import TaskDescriptorForm from "./TaskDescriptorForm";
 import TaskList from "./TaskList";
+import "./TaskDescriptor.css"
 
 const TaskDescriptor = () => {
     const [items, setItems] = useState([]);
@@ -18,13 +19,9 @@ const TaskDescriptor = () => {
     };
 
     return (
-        <div>
-            <div className="task-descriptor">
-                <TaskDescriptorForm onSubmit={handleAdd} />
-            </div>
-            <div className="task-list">
-                <TaskList items={items} updateList={setItems} />
-            </div>
+        <div className="task-descriptor">
+            <TaskDescriptorForm onSubmit={handleAdd} />        
+            <TaskList items={items} updateList={setItems} />
         </div>
     );
 }
