@@ -1,5 +1,5 @@
-import './App.css'
-import TaskDescriptor from './TaskDescriptor'
+import './styles/App.css';
+import TaskDescriptor from './components/TaskDescriptor/TaskDescriptor';
 
 function App() {
 

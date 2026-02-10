@@ -1,5 +1,5 @@
 import ListItem from "./ListItem";
-import "./TaskList.css"
+import "../../styles/TaskList.css";
 
 const TaskList = ({ items, updateList }) => {
 

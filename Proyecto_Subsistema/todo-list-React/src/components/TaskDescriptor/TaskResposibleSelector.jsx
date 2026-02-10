@@ -1,4 +1,4 @@
-import "./TaskResponsibleSelector.css";
+import "../../styles/TaskResponsibleSelector.css";
 
 const TaskResponsibleSelector = ({ value, onChange }) => {
 

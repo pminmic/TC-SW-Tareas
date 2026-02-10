@@ -1,4 +1,4 @@
-import "./ListItem.css"
+import "../../styles/ListItem.css";
 
 const ListItem = ({ item, onClick }) => {
     return(

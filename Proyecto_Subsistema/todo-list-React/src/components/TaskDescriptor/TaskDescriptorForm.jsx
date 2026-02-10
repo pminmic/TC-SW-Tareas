@@ -1,7 +1,7 @@
 import { useState } from "react";
 import TaskResponsibleSelector from "./TaskResposibleSelector";
 import TaskTextDescriptor from "./TaskTextDescriptor";
-import "./TaskDescriptorForm.css";
+import "../../styles/TaskDescriptorForm.css";
 
 const TaskDescriptorForm = ({ onSubmit }) => {
 
@@ -13,8 +13,11 @@ const TaskDescriptorForm = ({ onSubmit }) => {
     };
 
     const handleSubmit = event => {
+        // Prevenimos que se actualize (porque es un form)
         event.preventDefault();
         if (onSubmit) onSubmit({ text, responsible });
+        // Vaciamos el input de texto
+        setText("");
     };
 
     return(

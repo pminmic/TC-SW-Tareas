@@ -1,4 +1,4 @@
-import "./TaskTextDescriptor.css"
+import "../../styles/TaskTextDescriptor.css";
 
 const TaskTextDescriptor = ({ value, onChange }) => {
     return (

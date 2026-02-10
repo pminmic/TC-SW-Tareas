@@ -2,7 +2,9 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    height: 100%;
+    flex-basis: 50%;
+    padding-top: 120px;
 }
 
 .submit {

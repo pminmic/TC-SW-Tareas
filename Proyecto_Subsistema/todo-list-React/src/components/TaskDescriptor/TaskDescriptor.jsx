@@ -1,7 +1,7 @@
 import { useState } from "react";
 import TaskDescriptorForm from "./TaskDescriptorForm";
-import TaskList from "./TaskList";
-import "./TaskDescriptor.css"
+import TaskList from "../TaskList/TaskList";
+import "../../styles/TaskDescriptor.css";
 
 const TaskDescriptor = () => {
     const [items, setItems] = useState([]);
@@ -24,6 +24,6 @@ const TaskDescriptor = () => {
             <TaskList items={items} updateList={setItems} />
         </div>
     );
-}
+};
 
 export default TaskDescriptor;
