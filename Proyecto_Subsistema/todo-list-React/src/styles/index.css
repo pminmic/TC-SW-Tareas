@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Quantico:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
 
 * {
     margin: 0;
@@ -9,11 +9,11 @@
 html, body {
     margin: 0 auto;
     min-height: 100%;
-    background: radial-gradient(#353E43, black);
+    background: #d8dfb9;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    color: white;
-    font-family: "Quantico", sans-serif;
+    color: #000004;
+    font-family: "Jost", sans-serif;
     font-weight: 400;
     font-style: normal;
 }

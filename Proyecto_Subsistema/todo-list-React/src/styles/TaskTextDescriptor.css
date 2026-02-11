@@ -8,27 +8,30 @@
 
 .task-title {
     margin-bottom: 15px;
-    font-size: 50px;
+    font-size: 60px;
+    font-weight: 600;
+    padding-bottom: 25px;
 }
 
 .input-text {
-    background-color: lightgrey;
+    background-color: #b2bc8b;
     padding: 16px 20px;
-    border: 2px solid #ddd;
+    border: 3px solid #4d9462;
     border-radius: 20px;
-    font-size: 16px;
+    font-size: 28px;
     transition: all 0.3s ease;
     /* Borde por defecto */
     outline: none;
     width: 100%;
-    font-family:  "Quantico", sans-serif;
+    font-family:  "Jost", sans-serif;
 }
 
 .input-text:focus {
-  border-color: green;
+    border-color: #303442;
+    box-shadow: 0px 0px 5px #000004
 }
 
 .input-text::placeholder {
-    color: #777;
+    color: #d8dfb9;
     opacity: 1;
 }

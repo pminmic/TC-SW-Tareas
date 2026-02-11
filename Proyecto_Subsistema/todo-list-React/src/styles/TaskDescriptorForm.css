@@ -10,22 +10,23 @@
 .submit {
     margin: 10px;
     border-radius: 15px;
-    background-color: lightgray;
+    color: #d8dfb9;
+    background-color: #303442;
     padding: 10px 20px;
-    font-size: 20px;
-    font-family: 'Quantico', sans-serif;
+    font-size: 30px;
+    font-family: 'Jost', sans-serif;
     cursor: pointer;
+    border: solid 3px #4d9462;
+    
 }
+
 
 .submit:hover {
-    animation: submit-animation 1s forwards;
+    background-color: #22242f;
 }
 
-@keyframes submit-animation {
-    0% {
-        background-color: lightgrey;
-    }
-    100% {
-        background-color: lightgreen;
-    }
+.submit:active {
+    border-width: 4px;
+    padding: 9px 19px;
+    box-shadow: 0px 0px 5px #000004;
 }
