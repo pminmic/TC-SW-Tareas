@@ -1,11 +1,11 @@
 .item-list{
     cursor: pointer;
-    margin: 6px 0;
+    margin: 6px;
     font-size: 20px;
-    border: #404659 solid 3px;
-    border-radius: 6px;
-    width: 95%;
+    border: #303442 solid 3px;
     background-color: #d8dfb9;
+    border-radius: 6px;
+    width: 90%;
     text-align: center;
     transition: 0.5s;
     padding: 5px;
@@ -13,7 +13,7 @@
 }
 
 .item-list:hover {    
-    
+    background-color: #ccd2ae;
     text-decoration: line-through;
     /* animation: hover-animation 2s infinite ease-in-out; */
     font-style: oblique;

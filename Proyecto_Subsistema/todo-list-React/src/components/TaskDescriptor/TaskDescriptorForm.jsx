@@ -5,6 +5,7 @@ import "../../styles/TaskDescriptorForm.css";
 
 const TaskDescriptorForm = ({ onSubmit }) => {
 
+    // values of the different areas in the form
     const [responsible, setResponsible] = useState("Software");
     const [text, setText] = useState("");
 
@@ -13,7 +14,7 @@ const TaskDescriptorForm = ({ onSubmit }) => {
     };
 
     const handleSubmit = event => {
-        // Prevenimos que se actualize (porque es un form)
+        // Prevent the page refresh
         event.preventDefault();
         if (onSubmit) onSubmit({ text, responsible });
         // Vaciamos el input de texto

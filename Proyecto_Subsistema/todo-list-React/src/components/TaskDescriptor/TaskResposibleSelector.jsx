@@ -1,8 +1,9 @@
 import "../../styles/TaskResponsibleSelector.css";
 
-const TaskResponsibleSelector = ({ value, onChange }) => {
+// Visible to TaskList for the select in the "edit mode"
+export const departments = ["Software", "Hardware", "Partners", "Otros"];
 
-    const departments = ["Software", "Hardware", "Partners", "Otros"];
+const TaskResponsibleSelector = ({ value, onChange }) => {
 
     return (
         <div className="task-resposible-select">
