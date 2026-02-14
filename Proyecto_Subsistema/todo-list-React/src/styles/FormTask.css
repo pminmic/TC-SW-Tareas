@@ -1,0 +1,72 @@
+#form-task {
+    padding: 20px;
+}
+
+.form-input {
+    padding: 10px;
+    width: 50%;
+    border: 2px solid #000004;
+    border-radius: 15px;
+    margin: auto 5px;
+    font-family: 'Jost', sans-serif;
+    font-size: 16px;
+    background-color: rgba(255, 255, 255, 0.25);
+}
+
+.form-input:focus, .form-input:hover {
+    outline: none;
+    box-shadow: 0px 0px 6px #000004;
+    transition: 0.25s;
+    background-color: rgb(191, 191, 191);
+}
+
+.form-select {
+    cursor: pointer;
+    width: 12%;
+    padding: 10px;
+    border: 2px solid #000004;
+    border-radius: 15px;
+    margin: auto 5px;
+    font-family: 'Jost', sans-serif;
+    font-size: 16px;
+    background-color: rgba(255, 255, 255, 0.25);
+}
+
+.form-select:hover {
+    outline: none;
+    box-shadow: 0px 0px 6px #000004;
+    transition: 0.25s;
+    background-color: rgb(191, 191, 191);
+}
+
+.form-submit {
+    padding: 10px 15px;
+    border-radius: 15px;
+    background: linear-gradient(-45deg, #769aad, #6183b4, #45738a, #718c91);
+    background-size: 400% 400%;
+    animation: gradientMove 5s ease infinite;
+    border: 2px solid #000004;
+    border-radius: 15px;
+    cursor: pointer;
+    margin: auto 5px;
+    font-size: 20px;
+}
+
+.form-submit:hover {
+    box-shadow: 0px 0px 6px #000004;
+    transition: 0.25s;
+}
+
+@keyframes gradientMove {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
