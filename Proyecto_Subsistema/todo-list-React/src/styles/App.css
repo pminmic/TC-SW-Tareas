@@ -1,0 +1,50 @@
+#root {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: center;
+}
+
+.todo-title {
+    font-size: 40px;
+    margin:auto;
+}
+
+.todo-image {
+    padding: 10px;
+    border-radius: 15px;
+    background: linear-gradient(-45deg, #769aad, #6183b4, #45738a, #718c91);
+    background-size: 400% 400%;
+    animation: gradientMove 5s ease infinite;
+    box-shadow: 0px 0px 10px #000004;
+    border: #000004 solid 3px;
+}
+
+.button {
+    padding: 5px;
+    cursor: pointer;
+    margin: 0 5px;
+    background-color: rgba(255, 255, 255, 0.25);
+    border-radius: 10px;
+    border: 2px solid #000004;
+}
+
+.button:hover {
+    box-shadow: 0px 0px 6px #000004;
+    transition: 0.5s;
+    background-color: rgb(191, 191, 191);
+}
+
+@keyframes gradientMove {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
