@@ -3,6 +3,8 @@ import { FaEdit } from "react-icons/fa";
 import { IoTrashBin } from "react-icons/io5";
 
 const ListItem = ({ item, onClick, setEditIndex, pos }) => {
+
+    // Used to comunicate between the checkbox and the styles of the "item"
     const [checked, setChecked] = useState(false);
 
     return (

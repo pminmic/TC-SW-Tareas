@@ -1,6 +1,7 @@
 import { MdCancel } from "react-icons/md";
 import { FaSave } from "react-icons/fa";
 
+//  Component that represents when a task is being edited.
 const EditItem = ({ item, onSave, onCancel }) => {
 
 
@@ -14,7 +15,7 @@ const EditItem = ({ item, onSave, onCancel }) => {
                 <option value="Partners">Partners</option>
                 <option value="Otros">Otros</option>
             </select>
-            <button className="button" onClick={() => onSave(item)}><FaSave /></button>
+            <button className="button" onClick={() => onSave()}><FaSave /></button>
             <button className="button"onClick={onCancel}><MdCancel /></button>
         </div>
     );

@@ -6,7 +6,7 @@ import todoImage from "./assets/todo.png";
 
 function App() {
 
-
+  // Accay that will store the tasks, and a function to update it
   const [items, setItems] = useState([]);
 
   return (

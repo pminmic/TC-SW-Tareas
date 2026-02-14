@@ -2,6 +2,7 @@ import "../styles/FormTask.css";
 
 const FormTask = ({ items, setItems }) => {
 
+    // When the form is submitted, we prevent from refreshing the page, and we upadate the list of tasks
     const handleSubmit = e => {
         e.preventDefault();
         const text = document.getElementById("input-task").value;
