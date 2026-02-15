@@ -1,0 +1,96 @@
+:root {
+    /* Paleta de colores */
+    --color1: #211628;
+    --color2: #4c375d;
+    --color3: #8760a3;
+    --color4: #d395f4;
+    --color5: #ffdbf4;
+}
+
+html, body {
+    min-height: 100vh;
+    background-image: linear-gradient(
+        to bottom,
+        var(--color2),
+        var(--color5)
+    );
+    margin: 0 auto;
+    font-family: "Google Sans", sans-serif;
+}
+
+header h1 {
+    margin: 0 auto;
+    padding-top: 20vh;
+    padding-bottom: 5vh;
+    text-align: center;
+    color: white;
+    font-size: 56px;
+}
+
+#input-section {
+    border: 2px solid var(--color2);
+    margin: 0 auto;
+    max-width: 500px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.9);
+}
+
+#form {
+    display: flex;
+    flex-direction: column;
+}
+
+.taskInput, .responsibleInput, .submitLabel {
+    padding: 10px;
+}
+
+.taskInput {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.taskInput span {
+    padding-bottom: 5px;
+}
+
+#taskInput {
+    border-radius: 5px;
+    border: none;
+}
+
+#responsibleInput {
+    background-color: var(--color3);
+    border-radius: 5px;
+    color: var(--color4);
+    cursor: pointer;
+}
+
+.submitLabel {
+    margin: 0 auto;
+}
+
+#submit {
+    cursor: pointer;
+}
+
+#board h2 {
+    color: white;
+    text-align: center;
+    padding-top: 30px;
+    font-size: 40px;
+}
+
+
+.task:hover {
+    color: red;
+    font-style: italic;
+    text-decoration: line-through;
+    cursor: pointer;
+}

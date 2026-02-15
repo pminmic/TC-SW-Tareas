@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width initial-scale=1.0" />
+        <link rel="stylesheet" href="styles.css" />
+        <title>Lista de tareas</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Google+Sans+Code:ital,wght@0,300..800;1,300..800&family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <h1>Lista de tareas</h1>
+        </header>
+        <main>
+            <section id="input-section">
+                <form id="form">
+                    <label for="taskInput" class="taskInput">
+                        <span id="taskHeader">Tarea</span>
+                        <input type="text" id="taskInput" name="taskInput"/>
+                    </label>
+                    <label for="responsibleInput" class="responsibleInput">Responsable: 
+                        <select id="responsibleInput" name="responsibleInput">
+                            <option value="Software">Software</option>
+                            <option value="Hardware">Hardware</option>
+                            <option value="Partners">Partners</option>
+                            <option value="Otros">Otros</option>
+                        </select>
+                    </label>
+                    <label for="submit" class="submitLabel">                    
+                        <input id="submit" type="submit" value="Añadir" />
+                    </label>
+                </form>
+            </section>
+            <section id="board">
+                <h2>Tareas</h2>
+                <div id="list-section">
+                    <ul id="todo-list"></ul>
+                </div>
+            </section>
+        </main>
+        <script src="script.js"></script>
+    </body>
+</html>
