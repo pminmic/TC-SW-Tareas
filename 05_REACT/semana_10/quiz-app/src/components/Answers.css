@@ -1,0 +1,22 @@
+.answer {
+    background-color: #f0f0f0;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    padding: 15px;
+    margin: 5px 0;
+    cursor: pointer;
+    text-align: center;
+    font-size: 1.2em;
+    width: 50vw;
+    max-width: 600px;
+    
+}
+
+.answer:hover {
+    background-color: rgba(224, 224, 224, 1);
+}
+
+.checked {
+    background-color: #d0e6ff;
+    border-color: #007bff;
+}
