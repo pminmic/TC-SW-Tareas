@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyectos - TC-SW-Tareas</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 10px;
+            padding: 40px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 40px;
+            font-size: 14px;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .projects-grid section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .projects-grid section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        .projects-grid h2 {
+            color: white;
+            padding: 20px;
+            margin: 0;
+            border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+            font-size: 18px;
+        }
+
+        .projects-grid ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .projects-grid li {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .projects-grid li:last-child {
+            border-bottom: none;
+        }
+
+        .projects-grid a {
+            text-decoration: none;
+            color: white;
+            display: block;
+            padding: 12px 20px;
+            transition: background 0.3s ease;
+            font-size: 14px;
+        }
+
+        .projects-grid a:hover {
+            background: rgba(0, 0, 0, 0.15);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>📁 Proyectos TC-SW-Tareas</h1>
+        <p class="subtitle">Selecciona un proyecto para verlo</p>
+
+        <section class="projects-grid" id="projectsList">
+            <section class="module">
+                <h2>HTML</h2>
+                <ul>
+                    <li><a href="./01_HTML/tarea/index.html">Tarea 1</a></li>
+                    <li><a href="./01_HTML/tarea_adicional/index.html">Tarea adicional 1</a></a></li>
+                </ul>
+            </section>
+            <section>
+                <h2>CSS</h2>
+                <ul>
+                    <li><a href="./02_CSS/tarea/index.html">Tarea 2</a></li>
+                    <li><a href="./02_CSS/tarea_adicional/index.html">Tarea adicional 2</a></li>
+                </ul>
+            </section>
+            <section>
+                <h2>JavaScript</h2>
+                <ul>
+                    <li><a href="./03_JS/tarea.js">Tarea 3</a></li>
+                    <li><a href="./03_JS/tarea_adicional.js">Tarea adicional 3</a></li>
+                </ul>
+            </section>
+            <section>
+                <h2>DOM</h2>
+                <ul>
+                    <li><a href="./04_DOM/index.html">Tarea 4</a></li>
+                </ul>
+            </section>
+            <section>
+                <h2>React</h2>
+                <ul>
+                    <li><a href="./05_REACT/semana_10/quiz-app/dist/index.html">Tarea Semana 10</a></li>
+                </ul>
+            </section>
+            <section>
+                <h2>Proyecto Subsistema</h2>
+                <ul>
+                    <li><a href="./Proyecto_Subsistema/todo-list-DOM/index.html">Usando DOM</a></li>
+                    <li><a href="./Proyecto_Subsistema/todo-list-React/dist/index.html">Usando React</a></li>
+                </ul>
+            </section>
+    </div>
+</body>
+
+</html>
