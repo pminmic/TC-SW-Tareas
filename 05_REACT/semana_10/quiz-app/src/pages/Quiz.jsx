@@ -9,7 +9,10 @@ const Quiz = ({ data }) => {
     const [opcion, setOpcion] = useState("");
     const [correctas, setCorrectas] = useState(0);
 
+    // Restringimos el máximo de preguntas
     if (idx < 10) {
+
+        // Construimos un array con las opciones, y lo ordenamos alfabeticamente (para evitar que la correcta siempre sea la última)
         const answers = [...data[idx].incorrectAnswers, data[idx].correctAnswer].sort();
 
         const handleNext = () => {
@@ -31,9 +34,7 @@ const Quiz = ({ data }) => {
                             text={answer}
                             setOption={handleSelection}
                             key={i}
-                            name={`q${idx+1}`}
                             selectedOption={opcion}
-                            id={`q${idx+1}-opt${i}`}
                         />
                     );
                 })}
@@ -42,6 +43,7 @@ const Quiz = ({ data }) => {
         );
     }
 
+    // Una vez realizadas las 10 preguntas obtenemos nuestra puntución
     else {
         return (
             <div className="quiz">

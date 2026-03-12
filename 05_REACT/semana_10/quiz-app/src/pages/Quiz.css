@@ -1,3 +1,4 @@
+/* Estilos de la página del cuestionario */
 .quiz {
     display: flex;
     flex-direction: column;
@@ -13,6 +14,12 @@
     font-size: 1.2em;
     cursor: pointer;
     margin-top: 20px;
+}
+
+.submit:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .text {

@@ -7,6 +7,7 @@ function App() {
 
   const [quiz, setQuiz] = useState(null);
 
+  // Mediante la API y las promises del fetch obtenemos las preguntas y las añadimos al estado
   useEffect(() => {
     const fetchQuiz = async () => {
       fetch("https://the-trivia-api.com/api/questions?limit=10")
@@ -17,8 +18,10 @@ function App() {
     fetchQuiz()
   }, [])
 
+  // Mientras no tengamos las preguntas aparecera esto
   if (quiz === null) return <div>Cargando...</div>
 
+  // Return una vez tenemos las preguntas
   return (
     <div className='app'>
       <h1 className='app-title'>Quiz app!</h1>
